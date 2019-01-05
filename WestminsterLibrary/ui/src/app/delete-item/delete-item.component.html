@@ -1,0 +1,14 @@
+<div class="container">
+  <form id="contact">
+    <h3>Delete Item</h3>
+    <fieldset>
+      <input type="number" class="txt" name="bookISBN" [(ngModel)] = "deleteISBN" placeholder="Enter ISBN" required>
+    </fieldset>
+    <fieldset>
+      <input type="submit" class="btn" value="Delete Item" id = "btnSaveBook" (click) = "deleteItem()">
+      <!--<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Delete Item</button>-->
+    </fieldset>
+
+    <h5>Response: {{postRequestResponse}}</h5>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <form id="contact">
+    <h3>Add New Reader</h3>
+    <fieldset>
+      <input type="number" class="txt" name="isbn" [(ngModel)] = "readerId" placeholder="Enter Id" required>
+    </fieldset>
+    <fieldset>
+      <input type="text" class="txt" name="readerName" [(ngModel)] = "readerName" placeholder="Enter Reader Name">
+    </fieldset>
+    <fieldset>
+      <input type="number" class="txt" name="sector" [(ngModel)] = "readerMobile" placeholder="Enter Mobile Number">
+    </fieldset>
+    <fieldset>
+      <input type="email" class="txt" name="readerName" [(ngModel)] = "readerEmail" placeholder="Enter Reader Email">
+    </fieldset>
+    <fieldset>
+      <input type="submit" class="btn" value="Add a Reader" id = "adddReader" (click) = "addReader()">
+    </fieldset>
+
+    <h5>Response: {{postRequestResponse}}</h5>
+  </form>
+
+</div>

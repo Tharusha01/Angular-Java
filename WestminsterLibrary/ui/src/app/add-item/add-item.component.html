@@ -1,0 +1,47 @@
+<div class="container color-dark">
+  <div class="col">
+    <h2 align = "center">Add new items</h2>
+  </div>
+
+</div>
+
+<div class="container color-light">
+
+  <div class="col">
+    <h3 align = "center">Books</h3>
+    <p class = "pitemSyle">{{ bookTotal }} Book's {{messageBook}}</p>
+
+    <form ngForm="addNewBookForm" >
+
+      <input type="number" class="txt" name="bookISBN" [(ngModel)] = "bookISBN" placeholder="Enter ISBN" required="Required">
+      <input type="text" class="txt" name="bookTitle" [(ngModel)] = "bookTitle" placeholder="Enter Title" required="Required">
+      <input type="text" class="txt" name="bookSector" [(ngModel)] = "bookSector" placeholder="Enter Sector" required="Required">
+      <input type="text" class="txt" name="bookAuthor" [(ngModel)] = "bookAuthor" placeholder="Enter Author" required="Required">
+      <input type="text" class="txt" name="bookPublisher" [(ngModel)] = "bookPublisher" placeholder="Enter Publisher" required="Required">
+      <input type="date" class="txt" name="bookPulishedDate" [(ngModel)] = "bookPublishedDate" placeholder="Enter Published Date" required="Required">
+      <input type="number" class="txt" name="numberOfPage" [(ngModel)] = "bookNumberOfPage" placeholder="Enter Number of pages" required="Required">
+
+      <input type="submit" class="btn" value="Add a Book" id = "btnSaveBook" (click) = "saveNewBook()">
+    </form>
+      <h5>Response: {{postRequestResponse1}}</h5>
+  </div>
+
+    <div class="col">
+      <h3 align = "center">DVD</h3>
+      <p class = "pitemSyle">{{ dvdTotal }} DVD's {{messageDVD}}</p>
+          <form ngForm="addNewDVDForm">
+
+            <input type="number" class="txt" name="dvdISBN" [(ngModel)]="dvdISBN" placeholder="Enter ISBN" required="Required">
+            <input type="text" class="txt" name="dvdTitle" [(ngModel)]="dvdTitle" placeholder="Enter Title" required="Required">
+            <input type="text" class="txt" name="dvdSector" [(ngModel)]="dvdSector" placeholder="Enter Sector" required="Required">
+            <input type="text" class="txt" name="dvdSub" [(ngModel)]= "dvdLang" placeholder="Enter Available Subtitles" required="Required">
+            <input type="text" class="txt" name="dvdSub" [(ngModel)]= "dvdSub" placeholder="Enter Available Subtitles" required="Required">
+            <input type="text" class="txt" name="dvdProduser" [(ngModel)]= "dvdProduser" placeholder="Enter Producer" required="Required">
+            <input type="text" class="txt" name="dvdActor" [(ngModel)]= "dvdActor" placeholder="Enter Actors" required="Required">
+            <input type="submit" class="btn" value="Add a DVD" id = "btnSaveDVD" (click) = "saveNewDVD()">
+          </form>
+
+          <h5>Response: {{postRequestResponse2}}</h5>
+
+  </div>
+</div>

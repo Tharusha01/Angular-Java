@@ -1,0 +1,42 @@
+<div class="container">
+  <form class="contact">
+    <h3>Borrow Book</h3>
+    <fieldset>
+      <input type="number" class="txt" name="isbn" [(ngModel)] = "bBookISBN" placeholder="Enter ISBN" required>
+    </fieldset>
+    <fieldset>
+      <input type="text" class="txt" name="readerName" [(ngModel)] = "bBReaderName" placeholder="Enter Reader Name" required>
+    </fieldset>
+    <fieldset>
+      <input type="date" class="txt" name="sector" [(ngModel)] = "bBDate" placeholder="Enter Date" required>
+    </fieldset>
+    <fieldset>
+      <fieldset>
+        <input type="time" class="txt" name="sector" [(ngModel)] = "bBookTime" placeholder="Enter Time">
+      </fieldset>
+      <input type="submit" class="btn" value="Borrow Book" id = "btnBorrowItem" (click) = "borrowBook()">
+    </fieldset>
+    <h5>{{postRequestResponseBook}}</h5>
+  </form>
+
+
+  <form class="contact">
+    <h3>Borrow DVD</h3>
+    <fieldset>
+      <input type="number" class="txt" name="isbn" [(ngModel)] = "bDVDISBN" placeholder="Enter ISBN" required>
+    </fieldset>
+    <fieldset>
+      <input type="text" class="txt" name="readerName" [(ngModel)] = "bDReaderName" placeholder="Enter Reader Name" required>
+    </fieldset>
+    <fieldset>
+      <input type="date" class="txt" name="sector" [(ngModel)] = "bDDate" placeholder="Enter Date" required>
+    </fieldset>
+    <fieldset>
+      <fieldset>
+        <input type="time" class="txt" name="sector" [(ngModel)] = "bDVDTime" placeholder="Enter Time">
+      </fieldset>
+      <input type="submit" class="btn" value="Borrow DVD" id = "btnBorrowDVD" (click) = "borrowDVD()">
+    </fieldset>
+    <h5>{{postRequestResponseDVD}}</h5>
+  </form>
+</div>

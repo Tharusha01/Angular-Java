@@ -1,0 +1,65 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+# An example route (Prefix all API routes with apiPrefix defined in application.conf)
+GET     /api/summary                controllers.HomeController.appSummary
+
+# Serve static assets under public directory
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+# Book post request
++nocsrf
+POST    /api/postBook               controllers.WestminsterLibraryManager.postBook()
+
+# DVD post request
++nocsrf
+POST    /api/postDVD               controllers.WestminsterLibraryManager.postDVD()
+
+# Test post request add Book
++nocsrf
+POST    /api/addNewBook             controllers.WestminsterLibraryManager.addNewBook()
+
+#  post request add DVD
++nocsrf
+POST    /api/addNewDVD              controllers.WestminsterLibraryManager.addNewDVD()
+
+#  post request Borrow Book
++nocsrf
+POST    /api/borrowBook           controllers.WestminsterLibraryManager.borrowBook()
+
+#  post request Borrow DVD
++nocsrf
+POST    /api/borrowDVD             controllers.WestminsterLibraryManager.borrowDVD()
+
+#  post request Display Book
++nocsrf
+POST    /api/displayBook           controllers.WestminsterLibraryManager.displayBook()
+
+#  post request Display DVD
++nocsrf
+POST    /api/displayDVD            controllers.WestminsterLibraryManager.displayDVD()
+
+#  post request Delete item
++nocsrf
+POST    /api/deleteItem            controllers.WestminsterLibraryManager.deleteItem()
+
+#  post request grnerste Report
++nocsrf
+POST    /api/generateReport           controllers.WestminsterLibraryManager.generateReport()
+
+#  post request Add Reder
++nocsrf
+POST    /api/addReader           controllers.WestminsterLibraryManager.addReader()
+
+#  post request Add Reder
++nocsrf
+POST    /api/returnItem           controllers.WestminsterLibraryManager.returnItem()
+
+#  post request search Item
++nocsrf
+POST    /api/searchItem           controllers.WestminsterLibraryManager.searchItem()
+

@@ -1,0 +1,20 @@
+<div class="container">
+  <form id="contact">
+    <h3>Return Item</h3>
+    <fieldset>
+      <input type="number" class="txt" name="isbn" [(ngModel)] = "rISBN" placeholder="Enter ISBN" required>
+    </fieldset>
+    <fieldset>
+      <input type="date" class="txt" name="readerName" [(ngModel)] = "rDate" placeholder="Enter Date">
+    </fieldset>
+    <fieldset>
+      <input type="time" class="txt" name="sector" [(ngModel)] = "rTime" placeholder="Enter Time">
+    </fieldset>
+    <fieldset>
+      <input type="submit" class="btn" value="Return Item" id = "returnItem" (click) = "returnItem()">
+    </fieldset>
+
+    <h5>Response: {{postRequestResponse}}</h5>
+  </form>
+
+</div>

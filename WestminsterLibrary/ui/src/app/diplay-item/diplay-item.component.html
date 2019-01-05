@@ -1,0 +1,75 @@
+<div class="container">
+    <form class="contact">
+      <h3>Display Items</h3>
+
+      <div class="search">
+        <input type="submit" class="btn" value="Search Item" id = "btnSaveBook" (click) = "searchMethod()">
+      <input type="text" class="txt" name="search" [(ngModel)] = "search" placeholder="Enter Title">
+<br>
+
+      <h4 align="center">{{postRequestResponse}}</h4>
+      </div>
+  <h2>Book List</h2>
+
+  <table class="customers">
+    <thead>
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Sector</th>
+      <th>Author[s]</th>
+      <th>Publisher[s]</th>
+      <th>Publication Date</th>
+      <th>Number Of Pages</th>
+      <th>Availability</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of bookDetails">
+
+        <td>{{item.bookISBN}}</td>
+        <td>{{item.bookTitle}}</td>
+        <td>{{item.bookSector}}</td>
+        <td>{{item.bookAuthor}}</td>
+        <td>{{item.bookPublisher}}</td>
+        <td>{{item.bookPublishedDate}}</td>
+        <td>{{item.bookNumberOfPage}}</td>
+        <td [ngClass] = "{'positive' : item.status === Available, 'negative' : item.status !== Available}">{{item.status}}</td>
+
+      </tr>
+      </tbody>
+  </table>
+  </form>
+
+    <form class="contact">
+      <h2>DVD List</h2>
+
+      <table class="customers">
+        <thead>
+        <tr>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Sector</th>
+          <th>Languages</th>
+          <th>Subtitles</th>
+          <th>Producer</th>
+          <th>Actor[s]</th>
+          <th>Availability</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor ="let item of dvdDetails;">
+
+          <td>{{item.dvdISBN}}</td>
+          <td>{{item.dvdTitle}}</td>
+          <td>{{item.dvdSector}}</td>
+          <td>{{item.dvdLabguage}}</td>
+          <td>{{item.dvdSub}}</td>
+          <td>{{item.dvdProduser}}</td>
+          <td>{{item.dvdActor}}</td>
+          <td [ngClass] = "{'positive' : item.status === Available, 'negative' : item.status !== Available}">{{item.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
+</div>

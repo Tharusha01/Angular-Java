@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  max-width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.contact {
+  background: #f9f9f9ad;
+  padding: 30px;
+  margin: 100px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
